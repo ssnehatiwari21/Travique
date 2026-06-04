@@ -1,4 +1,4 @@
-# Travique 🌍
+# Travique 
 
 **Travique** is a full-stack travel accommodation platform that allows users to discover destinations, create property listings, upload images, view locations on interactive maps, and share reviews.
 
