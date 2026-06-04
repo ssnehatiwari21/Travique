@@ -1,24 +1,29 @@
 const mongoose=require("mongoose");
 const initData=require("./data");
 const Listing =require("../models/listing");
+const path = require("path");
+require("dotenv").config({
+  path: path.resolve(__dirname, "../.env")
+});
 
-const MONGO_URL="mongodb://127.0.0.1:27017/travique";
+
+const dbUrl= process.env.ATLASDB_URL;
+
 main()
-  .then(()=>{
-    console.log("connected to DB");
-  })
-  .catch((err)=>{
-    console.log(err);
+  .then(() => console.log("DB connection successful"))
+  .catch((err) => {
+    console.error("DB connection error:", err);
   });
 
-async function main(){
-  await mongoose.connect(MONGO_URL);
+async function main() {
+  await mongoose.connect(dbUrl, {
+  });
 }
 
 const initDB = async () =>{
   await Listing.deleteMany({});
   const data=initData.data.map((obj)=>({
-    ...obj,owner:"6a1d4682cc44118e51abbb04"
+    ...obj,owner:"6a218185fd6c269ef7bdf9dc"
   }));
   await Listing.insertMany(data);
 };
