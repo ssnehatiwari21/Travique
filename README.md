@@ -1,77 +1,23 @@
-# Travique
+# Travique 🌍
 
-<p align="center">
-  <strong>Explore • Discover • Travel</strong><br>
-  A full-stack travel accommodation and destination discovery platform.
-</p>
+**Travique** is a full-stack travel accommodation platform that allows users to discover destinations, create property listings, upload images, view locations on interactive maps, and share reviews.
 
-<p align="center">
-  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80" alt="Travique Banner">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Node.js-Express.js-green" alt="Node">
-  <img src="https://img.shields.io/badge/MongoDB-Atlas-success" alt="MongoDB">
-  <img src="https://img.shields.io/badge/Cloudinary-Image%20Storage-blue" alt="Cloudinary">
-  <img src="https://img.shields.io/badge/Mapbox-Maps-orange" alt="Mapbox">
-  <img src="https://img.shields.io/badge/MVC-Architecture-purple" alt="MVC">
-</p>
+Built using the **MVC Architecture**, the project demonstrates backend development, authentication, database design, cloud storage integration, and geolocation services.
 
 ---
 
-## ✨ Overview
+## Project Highlights
 
-Travique is a modern travel accommodation platform inspired by Airbnb, designed to help users discover destinations, explore unique stays, and share travel experiences.
-
-The application follows the **MVC (Model–View–Controller)** architecture and provides secure authentication, image uploads, interactive maps, and community-driven reviews.
-
----
-
-## 🚀 Features
-
-### 🔐 User Authentication
-
-* User Registration & Login
-* Secure Password Hashing
-* Session-Based Authentication
-* Protected Routes & Authorization
-
-### 🏡 Listing Management
-
-* Create New Listings
-* Edit Existing Listings
-* Delete Listings
-* View Detailed Listing Information
-* Upload Destination Images
-
-### ⭐ Reviews & Ratings
-
-* Add Reviews
-* Delete Reviews
-* Rating System
-* Review Validation
-
-### 🗺️ Interactive Maps
-
-* Mapbox Integration
-* Geocoding Support
-* Location Visualization
-
-### ☁️ Cloud Image Storage
-
-* Cloudinary Integration
-* Optimized Image Hosting
-* Image Upload Management
-
-### 📱 Responsive Design
-
-* Mobile-Friendly Interface
-* Bootstrap Components
-* Clean & Modern UI
+* Developed a complete CRUD-based travel listing platform.
+* Implemented secure user authentication and authorization using Passport.js.
+* Integrated Cloudinary for cloud-based image storage and management.
+* Added Mapbox geocoding and interactive maps for location visualization.
+* Designed a responsive user interface using Bootstrap and EJS templates.
+* Structured the application following the MVC design pattern for scalability and maintainability.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -94,132 +40,105 @@ The application follows the **MVC (Model–View–Controller)** architecture and
 ### Authentication
 
 * Passport.js
-* Passport Local
+* Express Session
 
-### File Uploads
+### Third-Party Services
 
-* Multer
 * Cloudinary
-
-### Maps & Geolocation
-
 * Mapbox
 
 ---
 
-## 🏗️ Architecture
+## Core Features
 
-Travique follows the **MVC Architecture**:
+### User Management
 
-```text
-Client Request
-      │
-      ▼
-   Routes
-      │
-      ▼
- Controllers
-      │
- ┌────┴────┐
- ▼         ▼
-Models    Views
-(MongoDB) (EJS)
-```
+* User Registration
+* User Login & Logout
+* Session-Based Authentication
+* Authorization Middleware
 
-This structure ensures:
+### Listing Management
 
-* Better code organization
-* Easier maintenance
-* Scalability
-* Separation of concerns
+* Create Listings
+* View Listings
+* Update Listings
+* Delete Listings
+* Image Upload Support
+
+### Reviews System
+
+* Add Reviews
+* Delete Reviews
+* Rating Functionality
+* Data Validation
+
+### Maps & Location Services
+
+* Geocoding Support
+* Interactive Location Maps
+* Destination Visualization
 
 ---
 
-## 📂 Project Structure
+## Architecture
+
+The application follows the MVC (Model-View-Controller) pattern:
+
+```text
+Models       → Database Logic
+Views        → User Interface (EJS)
+Controllers  → Business Logic
+Routes       → Request Handling
+```
+
+This architecture improves code organization, maintainability, and scalability.
+
+---
+
+## Project Structure
 
 ```text
 Travique/
-│
 ├── controllers/
-│   ├── listings.js
-│   ├── reviews.js
-│   └── users.js
-│
 ├── models/
-│   ├── listing.js
-│   ├── review.js
-│   └── user.js
-│
 ├── routes/
-│   ├── listing.js
-│   ├── review.js
-│   └── user.js
-│
 ├── views/
-│   ├── listings/
-│   ├── users/
-│   ├── layouts/
-│   └── includes/
-│
 ├── public/
-│   ├── css/
-│   ├── js/
-│   └── images/
-│
-├── utils/
 ├── middleware.js
 ├── cloudConfig.js
 ├── app.js
-├── package.json
-└── README.md
+└── package.json
 ```
 
 ---
 
-## ⚙️ Installation
-
-### Clone Repository
+## Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/travique.git
+git clone https://github.com/ssnehatiwari21/Travique.git
 cd travique
-```
-
-### Install Dependencies
-
-```bash
 npm install
 ```
 
-### Configure Environment Variables
-
-Create a `.env` file:
+Create a `.env` file and add:
 
 ```env
-ATLASDB_URL=your_mongodb_connection_string
-
-SECRET=your_session_secret
-
-CLOUD_NAME=your_cloudinary_cloud_name
-CLOUD_API_KEY=your_cloudinary_api_key
-CLOUD_API_SECRET=your_cloudinary_api_secret
-
-MAP_TOKEN=your_mapbox_access_token
+ATLASDB_URL=
+SECRET=
+CLOUD_NAME=
+CLOUD_API_KEY=
+CLOUD_API_SECRET=
+MAP_TOKEN=
 ```
 
-### Run the Application
-
-```bash
-node app.js
-```
-
-or
+Run the application:
 
 ```bash
 npm start
 ```
 
-Open:
+Server runs on:
 
 ```text
 http://localhost:8080
@@ -227,80 +146,22 @@ http://localhost:8080
 
 ---
 
-## 📸 Screenshots
+## Learning Outcomes
 
-### Home Page
+Through this project, I gained practical experience with:
 
-Add screenshot here:
-
-```text
-screenshots/home.png
-```
-
-### Listing Details
-
-Add screenshot here:
-
-```text
-screenshots/listing-details.png
-```
-
-### Create Listing
-
-Add screenshot here:
-
-```text
-screenshots/create-listing.png
-```
+* RESTful API Design
+* Authentication & Authorization
+* MongoDB Data Modeling
+* Cloud Storage Integration
+* Geolocation Services
+* MVC Architecture
+* Full-Stack Web Development
 
 ---
 
-## 🌱 Future Enhancements
-
-* Wishlist Functionality
-* Booking System
-* Online Payments
-* Travel Categories
-* Advanced Search Filters
-* User Dashboard
-* Real-Time Notifications
-* Favorite Destinations
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-```bash
-# Create feature branch
-git checkout -b feature/new-feature
-
-# Commit changes
-git commit -m "Add new feature"
-
-# Push branch
-git push origin feature/new-feature
-```
-
-Then open a Pull Request.
-
----
-
-## 📜 License
-
-Distributed under the MIT License.
-
----
-
-## 👩‍💻 Developer
+## Developer
 
 **Sneha Tiwari**
 
-Passionate about building scalable web applications and creating seamless user experiences.
-
----
-
-<p align="center">
-  <strong>🌍 Explore the World with Travique ✈️</strong>
-</p>
+Aspiring Software Developer passionate about building scalable web applications and creating intuitive user experiences.
