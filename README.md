@@ -129,7 +129,6 @@ SECRET=
 CLOUD_NAME=
 CLOUD_API_KEY=
 CLOUD_API_SECRET=
-MAP_TOKEN=
 ```
 
 Run the application:
