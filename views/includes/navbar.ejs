@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-md sticky-top">
+  <div class="container-fluid">
+
+    <a class="navbar-brand d-flex align-items-center gap-2" href="/listings">
+      <div class="brand-icon-wrap">
+        <i class="fa-solid fa-map-location-dot"></i>
+      </div>
+      <span class="brand-name">Tra<span>vique</span></span>
+    </a>
+
+    <button class="navbar-toggler border-0" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav me-auto">
+        <a class="nav-link explore-link" href="/listings">Explore</a>
+      </div>
+
+      <!-- Search bar -->
+      <form class="search-form" action="/listings/search" method="GET">
+        <div class="search-wrap">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input
+            type="text"
+            name="q"
+            class="search-input"
+            placeholder="Search destinations..."
+            autocomplete="off"
+            value="<%= typeof searchQuery !== 'undefined' ? searchQuery : '' %>"
+          >
+          <button type="submit" class="search-btn">Search</button>
+        </div>
+      </form>
+
+      <div class="d-flex align-items-center gap-2 ms-3">
+        <a class="list-space-btn" href="/listings/new">
+          <i class="fa-solid fa-plus"></i> List your space
+        </a>
+
+        <div class="nav-item dropdown">
+          <a class="user-pill dropdown-toggle" href="#" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <% if (currentUser) { %>
+              <div class="user-avatar"><%= currentUser.username.charAt(0).toUpperCase() %></div>
+              <span class="user-pill-name"><%= currentUser.username %></span>
+            <% } else { %>
+              <div class="guest-circle"><i class="fa-solid fa-user"></i></div>
+            <% } %>
+            <i class="fa-solid fa-chevron-down pill-chevron"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <% if (currentUser) { %>
+              <li class="dd-signed-in">
+                <span class="dd-signed-label">Signed in as</span>
+                <strong class="dd-signed-name"><%= currentUser.username %></strong>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/profile"><i class="fa-solid fa-user fa-sm"></i> Profile</a></li>
+              <li><a class="dropdown-item text-danger" href="/logout"><i class="fa-solid fa-right-from-bracket fa-sm"></i> Logout</a></li>
+            <% } else { %>
+              <li><a class="dropdown-item" href="/login"><i class="fa-solid fa-right-to-bracket fa-sm"></i> Login</a></li>
+              <li><a class="dropdown-item" href="/signup"><i class="fa-solid fa-user-plus fa-sm"></i> Sign up</a></li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>

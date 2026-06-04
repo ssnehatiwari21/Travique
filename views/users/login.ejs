@@ -1,0 +1,49 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row justify-content-center">
+  <div class="col-md-5 col-sm-8">
+    <div class="auth-card">
+
+      <div class="auth-header">
+        <i class="fa-solid fa-map-location-dot auth-icon"></i>
+        <h3 class="auth-title">Welcome Back</h3>
+        <p class="auth-sub">Log in to continue exploring Travique</p>
+      </div>
+
+      <form method="POST" action="/login" novalidate class="needs-validation">
+
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input
+            id="username"
+            name="username"
+            placeholder="enter username"
+            type="text"
+            class="form-control"
+            required
+          >
+          <div class="invalid-feedback">Please enter your username.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            id="password"
+            name="password"
+            placeholder="enter password"
+            type="password"
+            class="form-control"
+            required
+          >
+          <div class="invalid-feedback">Please enter your password.</div>
+        </div>
+
+        <button class="btn add-btn w-100 mt-2">Log In</button>
+
+      </form>
+
+      <p class="auth-footer">Don't have an account? <a href="/signup">Sign up</a></p>
+
+    </div>
+  </div>
+</div>

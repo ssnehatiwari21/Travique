@@ -1,0 +1,25 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row justify-content-center mt-5">
+  <div class="col-10 col-md-4 col-lg-3">
+    <div class="card edit-profile-card">
+
+      <div class="auth-header">
+        <div class="user-avatar mx-auto mb-3" style="width:60px;height:60px;font-size:1.5rem;">
+          <%= user.username.charAt(0).toUpperCase() %>
+        </div>
+        <h3 class="auth-title"><%= user.username %></h3>
+        <p class="auth-sub"><%= user.email || '—' %></p>
+      </div>
+
+      <hr>
+
+      <div class="d-flex flex-column gap-2 mt-2">
+        <a href="/profile/edit" class="btn outline-btn w-100">Edit Profile</a>
+        <a href="/listings" class="btn outline-btn w-100">Back to Listings</a>
+        <a href="/logout" class="btn delete-btn w-100">Logout</a>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="new-page">
+  <div class="new-card">
+
+    <div class="new-header">
+      <div class="new-header-icon">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+      <div>
+        <h3 class="new-title">Create a new listing</h3>
+        <p class="new-sub">Fill in the details to list your space</p>
+      </div>
+    </div>
+
+    <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+
+      <div class="new-grid">
+
+        <!-- LEFT COLUMN -->
+        <div class="new-col">
+
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input id="title" name="listing[title]" placeholder="e.g. Cozy Beachfront Cottage"
+              type="text" class="form-control" required>
+            <div class="invalid-feedback">Please enter a title.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea id="description" name="listing[description]"
+              placeholder="Describe your space..." class="form-control" rows="5" required></textarea>
+            <div class="invalid-feedback">Please enter a description.</div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-6">
+              <label for="country" class="form-label">Country</label>
+              <input id="country" name="listing[country]" placeholder="e.g. India"
+                type="text" class="form-control" required>
+              <div class="invalid-feedback">Please enter country.</div>
+            </div>
+            <div class="col-6">
+              <label for="location" class="form-label">Location</label>
+              <input id="location" name="listing[location]" placeholder="e.g. Goa"
+                type="text" class="form-control" required>
+              <div class="invalid-feedback">Please enter location.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="new-col">
+
+          <div class="mb-3">
+            <label for="price" class="form-label">Price <span class="new-price-hint">per night</span></label>
+            <div class="input-group">
+              <span class="input-group-text">₹</span>
+              <input id="price" name="listing[price]" placeholder="0"
+                type="number" class="form-control" required>
+            </div>
+            <div class="invalid-feedback">Please enter a price.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input id="image" name="listing[image][url]" type="file" class="form-control" required>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please upload an image.</div>
+          </div>
+
+          <div class="new-listing-tip">
+            <i class="fa-solid fa-circle-info"></i>
+            <p>Good photos and a clear description help your listing get more bookings.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="new-actions">
+        <a href="/listings" class="btn outline-btn">Cancel</a>
+        <button class="btn add-btn">Create listing</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
