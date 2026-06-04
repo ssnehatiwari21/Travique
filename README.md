@@ -158,7 +158,13 @@ Through this project, I gained practical experience with:
 * Full-Stack Web Development
 
 ---
+## Live Demo
 
+🔗 https://travique-xil1.onrender.com
+
+## GitHub Repository
+
+🔗 https://github.com/ssnehatiwari21/Travique.git
 ## Developer
 
 **Sneha Tiwari**
