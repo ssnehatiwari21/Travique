@@ -11,7 +11,7 @@ Built using the **MVC Architecture**, the project demonstrates backend developme
 * Developed a complete CRUD-based travel listing platform.
 * Implemented secure user authentication and authorization using Passport.js.
 * Integrated Cloudinary for cloud-based image storage and management.
-* Added Mapbox geocoding and interactive maps for location visualization.
+* Added leaflet geocoding and interactive maps for location visualization.
 * Designed a responsive user interface using Bootstrap and EJS templates.
 * Structured the application following the MVC design pattern for scalability and maintainability.
 
@@ -45,7 +45,7 @@ Built using the **MVC Architecture**, the project demonstrates backend developme
 ### Third-Party Services
 
 * Cloudinary
-* Mapbox
+* Leaflet
 
 ---
 
